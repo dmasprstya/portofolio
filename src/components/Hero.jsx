@@ -52,14 +52,14 @@ function Hero() {
               View My Projects
             </a>
           </div>
-          <div className="flex-none">
-            <div className="grid grid-cols-3 gap-x-3 gap-y-2">
+          <div className="w-full lg:max-w-[460px] flex-none">
+            <div className="flex flex-wrap gap-2">
               {techBadges.map((badge, i) => {
                 const Icon = badge.icon
                 return (
                   <div
                     key={i}
-                    className="flex items-center gap-1.5 px-2 py-1.5 bg-white dark:bg-slate-700/60 border border-gray-200 dark:border-slate-600 rounded-lg w-fit"
+                    className="flex items-center gap-1.5 px-2.5 py-1.5 bg-white dark:bg-slate-700/60 border border-gray-200 dark:border-slate-600 rounded-lg transition-all duration-200 hover:scale-[1.03] hover:border-blue-400 dark:hover:border-blue-400"
                   >
                     <Icon className={`w-3.5 h-3.5 ${badge.color}`} />
                     <span className="text-xs text-gray-700 dark:text-gray-200 font-medium whitespace-nowrap">
