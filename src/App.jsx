@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar'
+import Background from './components/Background'
 import Hero from './components/Hero'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
@@ -40,7 +41,7 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div className="min-h-screen bg-white dark:bg-slate-900 transition-colors">
+      <div className="relative min-h-screen transition-colors"><Background />
         <Navbar isDark={isDark} onToggle={toggleDark} />
         <main>
           <Routes>

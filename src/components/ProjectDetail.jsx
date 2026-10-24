@@ -520,7 +520,7 @@ function ProjectDetail() {
           </h2>
           <div className="space-y-4">
             {project.fullDescription.map((paragraph, index) => (
-              <p key={index} className="text-gray-700 dark:text-gray-300 leading-relaxed">
+              <p key={index} className="text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
                 {paragraph}
               </p>
             ))}

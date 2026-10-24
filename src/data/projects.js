@@ -36,7 +36,7 @@ const projects = [
     title: 'SIMONS',
     subtitle: 'Sistem Informasi Manajemen Penomoran Surat',
     tagline: 'A production-grade document numbering system solving real government workflow problems',
-    shortDescription: 'Full-stack web app for automating official letter numbering at Kanwil Kemenkumham Bangka Belitung — currently live in production with 1,900+ letters issued.',
+    shortDescription: 'Full-stack web app for automating official letter numbering at Kanwil Kemenkumham Bangka Belitung.',
     fullDescription: [
       'SIMONS is a production-deployed letter management system built for Kanwil Kemenkumham Bangka Belitung. The core engineering challenge was designing a reliable auto-numbering mechanism across multiple organizational units — solved through a custom Linear Daily Gap Rollover algorithm. The algorithm reserves a configurable gap buffer at each daily rollover, ensuring number continuity even when letters are issued out of sequence, then reclaims unused gap slots through a structured approval workflow.',
       'The admin dashboard surfaces real-time analytics: daily letter counts, pending gap requests, total letters issued (318+), and a breakdown chart of letter distribution per organizational division. The 4-level hierarchical classification system (e.g., AH.01.01 → W.7-AH.01.01-1934) mirrors the official Indonesian government document classification standard.',
@@ -44,6 +44,7 @@ const projects = [
     ],
     tech: ['Laravel 12', 'React 18', 'MySQL', 'Vite', 'Tailwind CSS'],
     github: 'https://github.com/dmasprstya/simons',
+    liveDemo: 'https://simons-beryl.vercel.app/',
     status: 'Complete & in production use',
     metrics: [
       {
@@ -93,6 +94,7 @@ const projects = [
     ],
     tech: ['Next.js 14', 'TypeScript', 'PostgreSQL', 'Tailwind CSS', 'Auth.js', 'Drizzle ORM', 'Supabase'],
     github: 'https://github.com/dmasprstya/rdi-cms',
+    liveDemo: 'https://rdi-cms.vercel.app/',
     status: 'Complete',
     metrics: [
       {
@@ -145,6 +147,7 @@ const projects = [
     ],
     tech: ['React', 'Architecture Design', 'UI/UX'],
     github: 'https://github.com/dmasprstya/hgo-app',
+    liveDemo: '', // Add live demo URL here
     status: 'In development',
     screenshots: []
   }

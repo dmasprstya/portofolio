@@ -31,6 +31,9 @@ export default {
           lg: '1120px',
         },
       },
+      fontFamily: {
+        sans: ['Plus Jakarta Sans', 'system-ui', '-apple-system', 'sans-serif'],
+      },
     },
   },
   plugins: [],
