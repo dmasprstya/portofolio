@@ -10,30 +10,30 @@ function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Left: Copyright */}
           <div className="text-gray-600 dark:text-gray-400 text-sm text-center md:text-left">
-            © 2026. Built with React + Vite.
+            © 2026. dmasprstya.
           </div>
 
           {/* Right: Social icons + text links */}
           <div className="flex items-center gap-5">
-            <a 
-              href="https://github.com/dmasprstya" 
-              target="_blank" 
+            <a
+              href="https://github.com/dmasprstya"
+              target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors text-sm"
             >
               <SiGithub className="w-5 h-5" />
               <span className="hidden sm:inline">GitHub</span>
             </a>
-            <a 
-              href="https://www.linkedin.com/in/mdimasprasetyawongso" 
-              target="_blank" 
+            <a
+              href="https://www.linkedin.com/in/mdimasprasetyawongso"
+              target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors text-sm"
             >
               <FaLinkedin className="w-5 h-5" />
               <span className="hidden sm:inline">LinkedIn</span>
             </a>
-            <a 
+            <a
               href="mailto:mdimasprasetyawongso@gmail.com"
               className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors text-sm"
             >

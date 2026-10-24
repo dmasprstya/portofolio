@@ -8,28 +8,33 @@ import { FaServer, FaLock } from 'react-icons/fa'
 import { TbRobot, TbNetwork } from 'react-icons/tb'
 import { HiOutlineLightBulb } from 'react-icons/hi'
 
-const techBadges = [
-  { name: 'Laravel', icon: SiLaravel, color: 'text-red-500' },
-  { name: 'Node.js', icon: SiNodedotjs, color: 'text-green-600' },
-  { name: 'MySQL', icon: SiMysql, color: 'text-blue-600' },
-  { name: 'PostgreSQL', icon: SiPostgresql, color: 'text-blue-500' },
-  { name: 'Drizzle ORM', icon: SiDrizzle, color: 'text-emerald-500' },
-  { name: 'Eloquent', icon: FaServer, color: 'text-red-400' },
-  { name: 'React', icon: SiReact, color: 'text-sky-500' },
-  { name: 'Next.js', icon: SiNextdotjs, color: 'text-gray-900 dark:text-gray-100' },
-  { name: 'TypeScript', icon: SiTypescript, color: 'text-blue-600' },
-  { name: 'Vite', icon: SiVite, color: 'text-purple-500' },
-  { name: 'Tailwind CSS', icon: SiTailwindcss, color: 'text-teal-500' },
-  { name: 'Git', icon: SiGit, color: 'text-orange-500' },
-  { name: 'GitHub', icon: SiGithub, color: 'text-gray-900 dark:text-gray-100' },
-  { name: 'REST API', icon: FaServer, color: 'text-indigo-500' },
-  { name: 'Sanctum', icon: FaLock, color: 'text-red-400' },
-  { name: 'Auth.js', icon: FaLock, color: 'text-yellow-600' },
-  { name: 'Sentry', icon: SiSentry, color: 'text-purple-600' },
-  { name: 'Full-stack Dev', icon: FaServer, color: 'text-blue-500' },
-  { name: 'AI-assisted Dev', icon: TbRobot, color: 'text-emerald-500' },
-  { name: 'Systems Architecture', icon: TbNetwork, color: 'text-amber-500' },
-  { name: 'Agile/Scrum', icon: HiOutlineLightBulb, color: 'text-orange-400' },
+const skillCategories = [
+  {
+    title: 'Backend',
+    badges: [
+      { name: 'Laravel', icon: SiLaravel, color: 'text-red-500' },
+      { name: 'Node.js', icon: SiNodedotjs, color: 'text-green-600' },
+      { name: 'MySQL', icon: SiMysql, color: 'text-blue-600' },
+      { name: 'PostgreSQL', icon: SiPostgresql, color: 'text-blue-500' },
+    ]
+  },
+  {
+    title: 'Frontend',
+    badges: [
+      { name: 'React', icon: SiReact, color: 'text-sky-500' },
+      { name: 'Next.js', icon: SiNextdotjs, color: 'text-gray-900 dark:text-gray-100' },
+      { name: 'TypeScript', icon: SiTypescript, color: 'text-blue-600' },
+      { name: 'Vite', icon: SiVite, color: 'text-purple-500' },
+      { name: 'Tailwind CSS', icon: SiTailwindcss, color: 'text-teal-500' },
+    ]
+  },
+  {
+    title: 'Tools',
+    badges: [
+      { name: 'Git', icon: SiGit, color: 'text-orange-500' },
+      { name: 'GitHub', icon: SiGithub, color: 'text-gray-900 dark:text-gray-100' },
+    ]
+  },
 ]
 
 function Hero() {
@@ -52,22 +57,31 @@ function Hero() {
               View My Projects
             </a>
           </div>
-          <div className="w-full lg:max-w-[460px] flex-none">
-            <div className="flex flex-wrap gap-2">
-              {techBadges.map((badge, i) => {
-                const Icon = badge.icon
-                return (
-                  <div
-                    key={i}
-                    className="flex items-center gap-1.5 px-2.5 py-1.5 bg-white dark:bg-slate-700/60 border border-gray-200 dark:border-slate-600 rounded-lg transition-all duration-200 hover:scale-[1.03] hover:border-blue-400 dark:hover:border-blue-400"
-                  >
-                    <Icon className={`w-3.5 h-3.5 ${badge.color}`} />
-                    <span className="text-xs text-gray-700 dark:text-gray-200 font-medium whitespace-nowrap">
-                      {badge.name}
-                    </span>
+          <div className="w-full lg:max-w-[480px] flex-none lg:mt-8">
+            <div className="flex flex-col gap-5 sm:gap-6">
+              {skillCategories.map((category, idx) => (
+                <div key={idx} className="flex flex-col">
+                  <h3 className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-gray-400 dark:text-slate-500 mb-2">
+                    {category.title}
+                  </h3>
+                  <div className="flex flex-wrap gap-2">
+                    {category.badges.map((badge, i) => {
+                      const Icon = badge.icon
+                      return (
+                        <div
+                          key={i}
+                          className="flex items-center gap-1.5 px-2.5 py-1.5 bg-white dark:bg-slate-700/60 border border-gray-200 dark:border-slate-600 rounded-lg transition-all duration-200 hover:scale-[1.03] hover:border-blue-500 dark:hover:border-blue-400 shadow-sm dark:shadow-none"
+                        >
+                          <Icon className={`w-3.5 h-3.5 ${badge.color}`} />
+                          <span className="text-xs text-gray-700 dark:text-gray-200 font-medium whitespace-nowrap">
+                            {badge.name}
+                          </span>
+                        </div>
+                      )
+                    })}
                   </div>
-                )
-              })}
+                </div>
+              ))}
             </div>
           </div>
         </div>
