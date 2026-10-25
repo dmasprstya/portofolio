@@ -1,5 +1,5 @@
 import { scrollToSection } from '../utils/scroll'
-import { 
+import {
   SiLaravel, SiReact, SiNodedotjs, SiMysql, SiPostgresql,
   SiNextdotjs, SiVite, SiTailwindcss, SiGit, SiGithub,
   SiTypescript, SiDrizzle, SiSentry
@@ -47,9 +47,9 @@ function Hero() {
               M. Dimas Prasetya Wongso
             </h1>
             <p className="text-base sm:text-lg text-gray-500 dark:text-gray-400 mb-8 leading-relaxed">
-              I design and build web systems end-to-end using modern tools and AI-assisted development. Focus on systems architecture, problem-solving, and delivery. Tech: React, Laravel, MySQL.
+              I design and build web systems end-to-end using modern tools and AI-assisted development. Focus on systems architecture, problem-solving, and delivery.
             </p>
-            <a 
+            <a
               href="#projects"
               onClick={(e) => scrollToSection(e, '#projects')}
               className="inline-block px-6 py-3 bg-blue-500 hover:bg-blue-600 dark:bg-blue-400 dark:hover:bg-blue-500 text-white font-medium rounded-lg transition-colors"
