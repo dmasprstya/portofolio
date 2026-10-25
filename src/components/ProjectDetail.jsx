@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom'
 import { useState, useEffect, useCallback, useRef } from 'react'
-import { FiArrowLeft, FiGithub, FiX, FiChevronLeft, FiChevronRight, FiZoomIn } from 'react-icons/fi'
+import { FiArrowLeft, FiGithub, FiX, FiChevronLeft, FiChevronRight, FiZoomIn, FiExternalLink } from 'react-icons/fi'
 import projects from '../data/projects'
 
 /* ─── Lightbox with Zoom ─── */
@@ -510,7 +510,18 @@ function ProjectDetail() {
               <FiGithub className="w-4 h-4" />
               View on GitHub
             </a>
-          </div>
+          {project.liveDemo && (
+            <a
+              href={project.liveDemo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-pink-500 dark:bg-pink-400 text-white dark:text-gray-900 rounded-lg hover:bg-pink-600 dark:hover:bg-pink-300 transition-colors text-sm font-medium"
+            >
+              <FiExternalLink className="w-4 h-4" />
+              Live Demo
+            </a>
+          )}
+        </div>
         </div>
 
         {/* Overview */}
